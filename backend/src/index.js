@@ -1,6 +1,7 @@
 import express from "express"
 import dotenv from "dotenv"
 import notesRouter from './route/notes.route.js'
+import { connectDb } from "./utils/connectdb.js";
 
 dotenv.config();
 const app = express();
@@ -13,6 +14,7 @@ app.get("/", (req, res) => {
 
 app.use('/api/notes', notesRouter);
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log("Server is running on port 3000");
+  connectDb();
 });
