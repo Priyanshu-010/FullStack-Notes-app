@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
 
 app.use('/api/notes', notesRouter);
 
-app.listen(process.env.PORT || 3000, () => {
-  console.log("Server is running on port 3000");
-  connectDb();
-});
+connectDb().then(() =>
+  app.listen(process.env.PORT || 3000, () => {
+    console.log("Server is running on port 3000");
+}));
