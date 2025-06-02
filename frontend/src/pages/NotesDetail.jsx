@@ -28,8 +28,36 @@ const NotesDetail = () => {
     fetchNotes();
   }, [])
 
-  const handleDelete = ()=>{};
-  const handleSave = ()=>{};
+  const handleDelete = async()=>{
+    if(!window.confirm("Are you sure you want to delete this note?")) return
+    try {
+      await axiosInstance.delete(`/notes/${id}`);
+      toast.success("Note deleted successfully");
+      navigate("/");
+    } catch (error) {
+      console.log("Error in handleDelete",error);
+      toast.error("Error deleting note");
+    }
+  };
+  const handleSave = async ()=>{
+     if (!note.title.trim() || !note.content.trim()) {
+      toast.error("Please add a title or content");
+      return;
+    }
+
+    setSaving(true);
+
+    try {
+      await axiosInstance.put(`/notes/${id}`, note);
+      toast.success("Note updated successfully");
+      navigate("/");
+    } catch (error) {
+      console.log("Error saving the note:", error);
+      toast.error("Failed to update note");
+    } finally {
+      setSaving(false);
+    }
+  };
   
     if (loading) {
     return (
