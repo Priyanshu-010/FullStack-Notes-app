@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useNavigate, useParams } from 'react-router'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import axiosInstance from '../utils/axios.js'
 import toast, { LoaderIcon } from 'react-hot-toast'
 import {ArrowLeftIcon, Trash2Icon} from 'lucide-react'

@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import notesRouter from "./route/notes.route.js";
+import authRouter from "./route/user.route.js";
 import { connectDb } from "./utils/connectdb.js";
 import cors from "cors";
 import path from "path";
@@ -29,6 +30,7 @@ app.use(express.urlencoded({ extended: true }));
 // });
 
 app.use("/api/notes", notesRouter);
+app.use("/api/auth", authRouter);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../frontend/dist")));
