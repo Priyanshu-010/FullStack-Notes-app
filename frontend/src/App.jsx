@@ -5,12 +5,11 @@ import NotesDetail from "./pages/NotesDetail.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import RegisterPage from "./pages/RegisterPage.jsx";
 import ProtectRoute from "./components/ProtectedRoute.jsx";
-// import toast from "react-hot-toast"
 
 function App() {
   return (
-    <div className="relative h-full w-full">
-      <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_60%,#00FF9D40_100%)]" />
+    <div className="relative min-h-screen w-full">
+      <div className="absolute inset-0 -z-10 h-full w-full bg-gradient-to-br from-gray-900 to-gray-800 px-4 sm:px-6 lg:px-8" />
       <Routes>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
