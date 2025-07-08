@@ -23,34 +23,36 @@ const CreatePage = () => {
       toast.success("Note created successfully");
       navigate("/");
     } catch (error) {
+      console.log("Error in handleSubmit",error)
       toast.error("Error creating note");
-      console.log("Error creating note", error)
     }finally{
       setLoading(false)
     }
-    console.log(title, content);
   }
+
   return (
-     <div className="min-h-screen bg-base-200">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white">
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-2xl mx-auto">
-          <Link to={"/"} className="btn btn-ghost mb-6">
+          <Link to={"/"} className="btn btn-ghost text-gray-300 hover:text-white mb-6">
             <ArrowLeftIcon className="size-5" />
             Back to Notes
           </Link>
 
-           <div className="card bg-base-100">
+          <div className="card bg-gray-800 border border-gray-700">
             <div className="card-body">
-              <h2 className="card-title text-2xl mb-4">Create New Note</h2>
+              <h2 className="card-title text-2xl mb-4 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
+                Create New Note
+              </h2>
               <form onSubmit={handleSubmit}>
                 <div className="form-control mb-4">
                   <label className="label">
-                    <span className="label-text">Title</span>
+                    <span className="label-text text-gray-300">Title</span>
                   </label>
                   <input
                     type="text"
                     placeholder="Note Title"
-                    className="input input-bordered"
+                    className="input input-bordered bg-gray-700 text-white border-gray-600"
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                   />
@@ -58,18 +60,22 @@ const CreatePage = () => {
 
                 <div className="form-control mb-4">
                   <label className="label">
-                    <span className="label-text">Content</span>
+                    <span className="label-text text-gray-300">Content</span>
                   </label>
                   <textarea
                     placeholder="Write your note here..."
-                    className="textarea textarea-bordered h-32"
+                    className="textarea textarea-bordered bg-gray-700 text-white border-gray-600 h-32"
                     value={content}
                     onChange={(e) => setContent(e.target.value)}
                   />
                 </div>
 
                 <div className="card-actions justify-end">
-                  <button type="submit" className="btn btn-primary" disabled={loading}>
+                  <button 
+                    type="submit" 
+                    className="btn bg-gradient-to-r from-green-500 to-blue-600 border-none text-white hover:from-green-600 hover:to-blue-700"
+                    disabled={loading}
+                  >
                     {loading ? "Creating..." : "Create Note"}
                   </button>
                 </div>
