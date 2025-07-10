@@ -83,8 +83,9 @@ npm install
 ---
 
 🌐 Live Demo
-Coming Soon!
-(Will be deployed using Vercel for frontend & Render for backend)
+
+> 🚀 [Note Taking App Live](https://note-taking-app-a5as.onrender.com)
+> *(Hosted using Render for both frontend and backend — may take a few seconds to wake up if idle)*
 
 ---
 
