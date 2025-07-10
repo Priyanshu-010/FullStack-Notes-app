@@ -91,8 +91,8 @@ Coming Soon!
 👤 About the Developer
 Priyanshu Rai
 📧 priyanshurai2772@gmail.com
-🔗 LinkedIn: [LinkedIn] (https://www.linkedin.com/in/priyanshuraidev/)
-💻 GitHub: [GitHub] (https://github.com/Priyanshu-010)
+🔗 LinkedIn: (https://www.linkedin.com/in/priyanshuraidev/)
+💻 GitHub: (https://github.com/Priyanshu-010)
 
 ---
 
