@@ -54,6 +54,14 @@
 
 ---
 
+
+## 🌐 Live Demo
+
+> 🚀 [Note Taking App Live](https://note-taking-app-a5as.onrender.com)  
+> *(Hosted using Render for both frontend and backend — may take a few seconds to wake up if idle)*
+
+---
+
 ## 📦 Installation
 
 ### ⚙️ Prerequisites
@@ -79,13 +87,6 @@ npm install
 
 # Optional: Create a .env file inside client folder with:
 # VITE_API_BASE_URL=http://localhost:3000/api
-
----
-
-🌐 Live Demo
-
-> 🚀 [Note Taking App Live](https://note-taking-app-a5as.onrender.com)
-> *(Hosted using Render for both frontend and backend — may take a few seconds to wake up if idle)*
 
 ---
 
